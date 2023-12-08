@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>
+            Fitness Equipments
+        </title>
+        <link href="css/gymstyle.css" rel="stylesheet" />
+        <style>
+            
+        </style>
+    </head>
+    <body>
+          <%-include('include/header')%>
+          <!--To create the header text and background image-->
+            <header>
+                <div class="header-content">
+                    <h2>Hustle For That Muscle</h2>
+                    <div class="line"></div>
+                    <h1>Equipments Only For Muscle Builders</h1>
+                    <a href="#" class="ctn">Learn More</a>
+                </div>
+            </header>
+            <div class="topnav">
+                <marquee>
+                    Sales are currently active now a days so grab the items per your choice
+                </marquee>
+                <input type="text" placeholder="Search..">
+            </div>
+            <!--section for sale in bottom of the website-->
+            <section class="sales">
+                <div class="title">
+                    <h1>Sale Item</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="sales-section">
+                <div class="row">
+                    <div class="column">
+                        <img src="Images/Equipment1.png" width="80%" height="80%" />
+                        <h4>Nordiac Track</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=1" class="ctn" id="equipment1" onclick="setItem('1')">Learn More</a>
+                    </div>
+                    <div class="column">
+                        <img src="Images/Equipment2.png" width="80%" height="80%" />
+                        <h4>Recumbent Bike</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=2" class="ctn" id="equipment2" onclick="setItem('2')">Learn More</a>
+                    </div>
+                    <div class="column">
+                        <img src="Images/WingSet.png" width="80%" height="80%" />
+                        <h4>Bench Squat</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=3" class="ctn" id="equipment2" onclick="setItem('3')">Learn More</a>
+                    </div>
+                    <div class="column">
+                        <img src="Images/PullOutBench.png" width="80%" height="80%" />
+                        <h4>PullOut Bench</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=4" class="ctn" id="equipment2" onclick="setItem('4')">Learn More</a>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="Images/Equipment3.png" width="80%" height="80%" />
+                        <h4>DumbBell Set</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=5" class="ctn" id="equipment3" onclick="setItem('5')">Learn More</a>
+                    </div>
+                    <div class="column">
+                        <img src="Images/BenchSquat.png" width="80%" height="80%" />
+                        <h4>BenchSquat</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=6" class="ctn" id="equipment4" onclick="setItem('6')">Learn More</a>
+                    </div>
+                    <div class="column">
+                        <img src="Images/Equipment4.png" width="80%" height="80%" />
+                        <h4>Chest Dumble</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=7" class="ctn" id="equipment4" onclick="setItem('7')">Learn More</a>
+                    </div>
+                    <div class="column">
+                        <img src="Images/DumbellWing.png" width="80%" height="80%" />
+                        <h4>Dumbell Wing</h4>
+                        <!--<p>lorem ipsum asdasdzxz leroem dcerdxkmckmie ljkasoj</p>-->
+                        <a href="/productdescription?id=8" class="ctn" id="equipment4" onclick="setItem('8')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section class="explore">
+                <img src="#" class="forward" style="z-index:-1;"/>
+                <img src="#" class="backward" style="z-index:-1;"/>
+            </section>
+
+            <%-include('include/footer')%>
+
+
+            <script>
+                function setItem(id) {
+                    localStorage.setItem("id", id);
+                }
+            </script>
+            <script src="js/script.js"></script>
+        </body>
+        </html>

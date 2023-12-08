@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>enquiry</title>
+    <link href="./css/gymstyle.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300;700&display=swap');
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            background: #3d64b6;
+            border-radius:10px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color:#ffffff;
+        }
+        .form-container {
+            display: flex;
+            width: 100%;
+            height:100vh;
+            justify-content: center;
+            margin-top: 20px;
+            font-family: 'Open Sans', sans-serif;
+            align-items:center;
+            background-image: url('./Images/backk2.jpg');
+        /*    background:#ff0000;*/
+        }
+        #row
+        {
+            display:flex;
+            margin-top:50px;
+       
+        }
+        #column {
+            display:flex;
+            margin-left:20px;
+            flex:50px;
+            color: grey;
+        }
+        input
+        {
+            width:300px;
+            height:30px;
+            border-radius:10px;
+            margin-left:20px;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+            background: #3d64b6;
+            font-family: 'Open Sans', sans-serif;
+        }
+        marquee {
+            font-size: 20px;
+            font-weight: 800;
+            font-family: 'Open Sans', sans-serif;
+        }
+        @media only screen and (max-width:850px) {
+        .form-container
+        {
+            display:flex;
+            flex-direction:row;
+        }
+        #row
+        {
+            flex-direction:column;
+        }
+        }
+    </style>
+</head>
+<body>
+    <%-include('include/header')%>
+    <div class="form-container">
+        <form method="post" action="/enquiry">
+            <div id="row">
+            </div>
+            <div id="row">
+                <div id="column">First Name</div>
+                <div id="column"><input value="First...."  name="firstname"/></div>
+                <div id="column">Last Name</div>
+                <div id="column"><input value="Last...."  name="lastname"/></div>
+            </div>
+            <div id="row">
+                <div id="column">Address   </div>
+                <div id="column"><input value="Address..." name="Address" /></div>
+                <div id="column">Item Id</div>
+                <div id="column"><input value="Item Id..." name="ItemID" /></div>
+            </div>
+            <div id="row">
+                <div id="column"><button type="submit">Submit</button></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+        <head>
+            <title>
+                Fitness Equipments
+            </title>
+            <link href="css/gymstyle.css" rel="stylesheet" />
+            <style>
+                .navbar
+                {
+                    background-color: #212121;
+                    height:130px;
+                    position: static;
+                }
+                .midsection
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    width:100vw;
+                    height:80vh;
+                    margin-top:40px;
+                }
+                .midsection .leftsection
+                {
+                    width:45%;
+                    margin-left:20px;
+                    height:100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .midsection .rightsection
+                {
+                    width:45%;
+                    margin-right:20px;
+                    background-color: aqua;
+                    height:100%;
+                    margin-left: 50px;
+                }
+                .rightsection .content
+                {
+                  margin-left:50px;
+                  margin-top:20px;
+                }
+                .content button
+                {
+                    width:120px;
+                    height:40px;
+                    border-radius:50px;
+                    border-style: none;
+                    background-color: greenyellow;
+                    font-size:18px;
+                }
+            </style>
+        </head>
+        <body>
+<%-include('include/header')%>
+    <div class="midsection">
+        <div class="leftsection">
+            <img src="<%=data.image%>"/>
+        </div>
+        <div class="rightsection">
+            <div class="content">
+            <form method="get" action="/cart">
+                 <input name="id" value="<%=id%>" hidden/>
+                <h1><%=data.title%></h1>
+                <h3 style="color:greenyellow;font-size:27px; margin-top:15px;">$ <%=data.price%></h3>
+                <h4><%=data.description%></h4>
+                <button type="submit">Add To Cart</button>
+            </form>
+            </div>
+        </div>
+    </div>
+<%-include('include/footer')%>
+</body>
+</html>

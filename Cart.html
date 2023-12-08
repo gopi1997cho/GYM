@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Fitness Freak Cart</title>
+    <link href="gymstyle.css" rel="stylesheet" />
+    <style>
+        *
+        {
+            margin:0;
+            background:#f6f5f5;
+        }
+        .navbar
+        {
+            background:none;
+            color:#969696;
+            align-items:center;
+        }
+        .navbar .logo
+        {
+            background:none;
+        }
+        .navbar .nav-links
+        {
+            align-content:center;
+        }
+        .navbar li
+        {
+            background:none;
+            justify-content:center;
+            text-align:center;
+        }
+        .main {
+            display: flex;
+            width: 100%;
+            justify-content:center;
+            align-items:center;
+        }
+        .cartDisplay {
+            display: flex;
+            width: 100%;
+            height: auto;
+            margin-top: 150px;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            font-size: 2vmin;
+        }
+        .cartInRow {
+         /*   transform: translate(-200px,0);*/
+            display: flex;
+            color: black;
+            align-items: center;
+            border:1px solid #969696;
+            width:60%;
+            margin-top:10px;
+        }
+
+        .cartInRow #column
+        {
+            margin-left:20px;
+            display:flex;
+            flex-direction:column;
+        }
+        .cartInRow h3
+        {
+            color:#969696;
+        }
+        .cartCalculation
+        {
+            display:flex;
+            height:50vh;
+            margin-left:50px;
+            width:100%;
+            justify-content:flex-start;
+            margin-top:200px;
+        }
+        .cartCalculation .cartInRow
+        {
+            align-items:baseline;
+        }
+        .cartCalculation ul {
+            margin-left: 0px;
+            text-align: center;
+            font-size: 3vmin;
+        }
+        .cartCalculation ul li
+        {
+            margin-left:0;
+            text-align:left;
+            margin-top:20px;
+        }
+        .cartCalculation button
+        {
+            width:100px;
+            color:aliceblue;
+            background:#ff7373;
+            height:5vh;
+            margin-bottom:10px;
+        }
+        .cartCalculation h2 {
+            width: 300px;
+            color: aliceblue;
+            background: #ff7373;
+            height: 5vh;
+            margin-top: 10px;
+            text-align:center;
+            margin-left:25px;
+        }
+        #emptyCart
+        {
+            width:80px;
+            height:5vh;
+            background:#ff0000;
+        }
+        @media only screen and (max-width:850px) {
+        .main
+        {
+            display:flex;
+            flex-direction:column;
+        }
+        .cartCalculation {
+            margin-top:100px;
+            margin-left:150px;
+            margin-bottom:100px;
+        }
+            .cartCalculation h2 {
+            width:auto;
+            }
+            }
+    </style>
+</head>
+<body>
+    <!--This is for navbar-->
+    <nav class="navbar">
+        <h1 class="logo">Cart Items</h1>
+        <ul class="nav-links">
+            <li class="active">Bag.....</li>
+            <li><a href="#"></a>Address....</li>
+            <li><a href="#"></a>Payment....</li>
+            <li><button id="emptyCart" value="Empty Cart" name="Empty Cart">EmptyCart</button></li>
+        </ul>
+
+        <img src="Images/menubtn.png" class="menu-btn" />
+    </nav>
+
+    <div class="main">
+        <div class="cartDisplay">
+            <!--<div class="cartInRow">
+                <img src="Images/Equipment1.png" width="100" height="100" />
+                <div id="column">
+                    <h2>Description of a item</h2>
+                    <h3>Description of a item</h3>
+                    <h4>Price</h4>
+                </div>
+            </div>
+            <div class="cartInRow">
+                <img src="Images/Equipment1.png" width="100" height="100" />
+                <div id="column">
+                    <h2>Description of a item</h2>
+                    <h3>Description of a item</h3>
+                    <h4>Price</h4>
+                </div>
+            </div>-->
+        </div>
+
+        <div class="cartCalculation">
+            <div class="cartInRow">
+                <div id="column">
+                    <h2>Cart</h2>
+                    <ul>
+                        <li>Price Details:</li>
+                        <li>Discount on MRP:</li>
+                        <li>Coupon Discount:</li>
+                        <li>Convience Fee:</li>
+                        <li>Total Amount:</li>
+                    </ul>
+                    <button type="button">PLACE ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let arr = [];
+/*        window.onload = () => { localStorage.setItem("itemsInCart",  JSON.stringify(arr));};*/
+        let emptycart = document.getElementById('emptyCart');
+
+        emptycart.addEventListener('click', () => {
+            let cartDisplay = document.querySelectorAll('.cartDisplay .cartInRow');
+            cartDisplay.forEach((x) => x.remove());
+            localStorage.setItem("itemsInCart", JSON.stringify(arr));
+            localStorage.setItem("cartItems", 0);
+
+        });
+        let cartDisplayer = document.querySelector('.cartDisplay');
+        let items = JSON.parse(localStorage.getItem('itemsInCart'));
+        if (items.length > 0) {
+            for (var i = 0; i < items.length; i++) {
+
+                cartDisplayer.innerHTML = cartDisplayer.innerHTML + `<div class='cartInRow'>
+            <img src=${items[i].image} width='100' height='100'>
+             <div id="column">
+                    <h2>${items[i].headText}</h2>
+                    <h3>${items[i].description}</h3>
+                    <h4>${items[i].price}</h4>
+                </div>
+                </div>`;
+            }
+        }
+      
+    </script>
+</body>
+</html>     

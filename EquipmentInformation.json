@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "items":  {
+            "image":"Images/Equipment1.png",
+            "title":"Nordiac Track",
+            "price":"202",
+            "description":"NordicTrack is a well-known brand that specializes in fitness equipment, particularly in the production of exercise machines such as treadmills, elliptical trainers, exercise bikes, rowing machines, and more. The company is recognized for its high-quality fitness products and innovative features."
+       }
+    },
+    {
+        "id":2,
+        "items":  {
+            "image":"Images/Equipment2.png",
+            "title":"Recumbent Bike",
+            "price":"232",
+            "description":"A recumbent bike is a type of stationary exercise bike designed with a comfortable, reclined seating position. Unlike traditional upright bikes, recumbent bikes have a seat with a backrest, and the pedals are positioned in front of the user rather than below them."
+       }
+    },
+    {
+        "id":3,
+        "items":  {
+            "image":"Images/WingSet.png",
+            "title":"Bench Squat",
+            "price":"267",
+            "description":"The bench press is a compound exercise that primarily targets the chest, shoulders, and triceps. It involves lying on a flat bench and pushing a barbell upward from the chest. The exercise is commonly performed with a barbell, but it can also be done with dumbbells."
+       }
+    },
+    {
+        "id":4,
+        "items":  {
+            "image":"Images/PullOutBench.png",
+            "title":"PullOut Bench",
+            "price":"280",
+            "description":"The bench press is a popular and effective compound exercise that primarily targets the muscles of the chest, shoulders, and triceps. It is a fundamental movement in strength training and bodybuilding. The exercise is typically performed using a barbell, but it can also be done with dumbbells."
+       }
+    },
+    {
+        "id":5,
+        "items":  {
+            "image":"Images/Equipment3.png",
+            "title":"DumbBell Set",
+            "price":"120",
+            "description":"A dumbbell set typically refers to a collection of dumbbells that come in various weights, allowing individuals to perform strength training exercises with different resistance levels. Dumbbells are versatile and can be used for a wide range of exercises to target various muscle groups."
+       }
+    },
+    {
+        "id":6,
+        "items":  {
+            "image":"Images/Equipment3.png",
+            "title":"Bench Squat",
+            "price":"350",
+            "description":"The squat is a fundamental and compound exercise that targets multiple muscle groups, primarily the quadriceps, hamstrings, and glutes. It's a functional movement that mimics a motion we use in our daily activities like sitting down and standing up. "
+       }
+    },
+    {
+        "id":7,
+        "items":  {
+            "image":"Images/Equipment4.png",
+            "title":"Chest Dumble",
+            "price":"150",
+            "description":"The dumbbell chest press is an effective exercise for targeting the chest muscles, shoulders, and triceps."
+       }
+    },
+    {
+        "id":8,
+        "items":  {
+            "image":"Images/DumbellWing.png",
+            "title":"Dumbell Row",
+            "price":"120",
+            "description":"The dumbbell row, also known as the bent-over dumbbell row, is a compound exercise that primarily targets the muscles of the upper back, including the latissimus dorsi, rhomboids, and traps."
+       }
+    }
+]

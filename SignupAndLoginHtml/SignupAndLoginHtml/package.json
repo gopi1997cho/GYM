@@ -1,0 +1,14 @@
+{
+  "name": "signup-and-login-html",
+  "version": "0.0.0",
+  "description": "SignupAndLoginHtml",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "render": "^0.1.4"
+  }
+}

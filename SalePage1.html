@@ -1,0 +1,106 @@
+<html>
+<head>
+<link href="SaleStyle.css" rel="stylesheet"/>
+</head>
+<body>
+    <!--<div id="parent">-->
+    <div class="row">
+        <div class="column">
+            <img src="Images/Equipment3.png" id="centerImage" />
+            <h4 id="centerText">Dumble Set</h4>
+            <p id="centerDescription">Dumbbells at Argos. Explore a huge range of dumbbells, kettlebells & barbells Order</p>
+                <button class="addToCart">AddToCart</button>
+            <!--<a href="SalePage3.html" class="ctn" id="equipment3">Learn More</a>-->
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        let x = 0;
+        const arr = [];
+        const items = [1,2,3];
+        arr.push('images/Equipment1.png');
+        arr.push('images/Equipment2.png');
+        arr.push('images/WingSet.png');
+        arr.push('images/PullOutBench.png');
+        arr.push('images/Equipment3.png');
+        arr.push('images/BenchSquat.png');
+        arr.push('images/Equipment4.png');
+        let id = localStorage.getItem("id");
+        let centerText = $('#centerText');
+        let centerDescription = $('#centerDescription');
+        var json =
+            [
+                {
+                    "image": arr[0],
+                    "headText": "Nordiac Track",
+                    "description": "Stay comfortable and cool as you ride with the Commercial VU 29’s advanced comfort features.",
+                    "price":"$100",
+                },
+                {
+                "image": arr[1],
+                    "headText": "Recumbent Bike",
+                    "description": "Stay comfortable as you ride with the NordicTrack VR35 Recumbent Bike",
+                    "price": "$120",
+                },
+                {
+                    "image": arr[2],
+                    "headText": "Bench Squat",
+                    "description": "The USF 20Kg Dumbbell Set comes with two bars and 8 assorted weights",
+                    "price": "$140",
+                },
+                {
+                    "image": arr[3],
+                    "headText": "PullOut Bench",
+                    "description": "Stay comfortable as you ride with the NordicTrack VR35 Recumbent Bike",
+                    "price": "$150",
+                },
+                {
+                    "image": arr[4],
+                    "headText": "DumbBell Set",
+                    "description": "Stay comfortable as you ride with the NordicTrack VR35 Recumbent Bike",
+                    "price": "$160",
+                },
+                {
+                    "image": arr[5],
+                    "headText": "Bench Squat",
+                    "description": "Stay comfortable as you ride with the NordicTrack VR35 Recumbent Bike",
+                    "price": "$80",
+                },
+                 {
+                    "image": arr[6],
+                    "headText": "Chest Dumble",
+                     "description": "Stay comfortable as you ride with the NordicTrack VR35 Recumbent Bike",
+                     "price": "$60",
+                },
+                  {
+                    "image": arr[6],
+                    "headText": "Dumble Wing",
+                      "description": "Stay comfortable as you ride with the NordicTrack VR35 Recumbent Bike",
+                      "price": "$50",
+                }
+            ];
+        let jsonIndex;
+        for (var i = 0; i < json.length; i++) {
+            if (id == (i + 1)) {
+                jsonIndex = json[i];
+                $("#centerImage").attr('src', json[i]['image']);
+                centerText.text(json[i]['headText']);
+                centerDescription.text(json[i]['description']);
+            }
+        }
+        $('.addToCart').bind('click', () => {
+              alert("Item Added");
+            let getItem = localStorage.getItem("cartItems");
+            getItem++;
+           
+            localStorage.setItem("cartItems", getItem);
+
+            let getItemInCart = localStorage.getItem("itemsInCart");
+            let temp = JSON.parse(getItemInCart);
+            temp.push(jsonIndex);
+            localStorage.setItem("itemsInCart", JSON.stringify(temp));
+        });
+     
+    </script>
+</body>
+</html>

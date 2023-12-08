@@ -1,0 +1,59 @@
+<html>
+   <head>
+     <link href='./css/style.css' rel='stylesheet'/>
+       <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+   </head>
+  <body>
+    <div class="container">
+        <a href="/" style="text-decoration: none;"><h1 class="logo" style="color: white;margin-left:20px;"><span style="color: greenyellow;font-size:85px;">E</span>xercise Equipments</h1></a>
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form method="post" action="/login">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user" id="userIcon"></i>
+                        <input type="text" placeholder="Name" id="name"/>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" id="emailField" name="email"/>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="passwordField" name="password" />
+                    </div>
+                    <p>Lost Password <a href="#">Click Here!</a></p>
+                </div>
+                <div class="btn-field">
+                        <button type="button" id="signupBtn" class="disable">Sign Up</button>
+                        <button type="submit" id="signinBtn">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+      <script>
+          let signUpButton = document.getElementById('signupBtn');
+          let signInButton = document.getElementById('signinBtn');
+          let title = document.getElementById('title');
+          let nameField = document.getElementById('nameField');
+          let emailField = document.getElementById('emailField');
+          let passwordField = document.getElementById('passwordField');
+          let name = document.getElementById('name');
+          let userIcon = document.getElementById('userIcon');
+
+          window.onload = () => {
+              nameField.style.maxHeight = "0px";
+              nameField.style.display = "none";
+              userIcon.style.display = "none";
+              title.innerText = "Sign In";
+          }
+          signUpButton.addEventListener('click', () => {
+          
+              signUpButton.classList.remove('disable');
+              signInButton.classList.add('disable');
+              window.location.href = '/signup';
+          });
+      </script>
+      <script src="app.js"></script>
+  </body>
+</html>
