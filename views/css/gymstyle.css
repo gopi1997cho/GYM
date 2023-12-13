@@ -61,11 +61,16 @@ header
     width:100vw;
     height:100vh;
     background-image:url('../Images/backk.png');
-    background-position:bottom;
+    /* background-position:bottom; */
     background-size:cover;
     display:flex;
     align-items:flex-end;
     justify-content:center;
+}
+.container
+{
+    width:100%;
+    height:100%;
 }
 /*this is for link tag*/
 a
@@ -78,6 +83,10 @@ a
     padding:8px 15px;
     border-radius:20px;
     color:black; 
+}
+header
+{
+    height: 100vh;
 }
 /*This is for header content class created under the header tag to stylize the texts*/
 .header-content
@@ -125,17 +134,7 @@ section {
     font-size:4vmin;
     color:#49497e;
 }
-.sales-section
-{
-width:80vw;
-height:130vh;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-margin-top:20px;
 
-}
 .row
 {
     display:flex;
@@ -153,6 +152,12 @@ margin-top:20px;
     justify-content: start;
    
 }
+body
+{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
 .column
 {
     margin-left:33px;
@@ -162,11 +167,30 @@ margin-top:20px;
 {
     margin-top:20px;
     transition:transform 0.3s ease-in-out;
-    filter: invert(100%);
 }
 .row .column img:hover
 {
     transform: scale(1.1);
+}
+.sales-section
+{
+width:80vw;
+height:130vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top:20px;
+
+}
+.sales
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .sales .row
 {
@@ -355,11 +379,14 @@ footer ul li
     {
         margin-top:50px;
     }
-    .topnav
+    /* .topnav
     {
         display:flex;
         flex-direction:row;
-    }
+        height:20vh;
+        width:100%;
+        background-color: #1b1530;
+    } */
     .topnav marquee
     {
      flex:0.5;
@@ -374,10 +401,11 @@ footer ul li
 .topnav {
     display: flex;
    /* overflow: hidden;*/
-    background-color: rgba(94, 95, 97, 0.5);
+    background-color: rgb(44, 44, 44);
     height: 50px;
     font-size: 30px;
     justify-content: center;
+    align-items: center;
 }
 
 .topnav marquee {
@@ -385,8 +413,14 @@ footer ul li
     margin-right: 50px;
     text-align: center;
     flex:0.5;
+    margin-top:5px;
+    font-style: italic;
+    font-size:20px;
 }
-
+.allitems .row h4
+{
+    color:#1b1530;
+}
 .topnav input
 {
     flex:0.2;
@@ -402,7 +436,16 @@ footer ul li
     font-size: 17px;
     height:30px;
 }
-
+.allitems
+{
+    margin-top:40px;
+    width:90%;
+    height:auto;
+}
+.allitems hr
+{
+    color: #9797b248;
+}
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 /*@media screen and (max-width: 600px) {
     .topnav

@@ -7,11 +7,16 @@ const value = style.getPropertyValue('background-image');
 const forwardButton = document.querySelector('.forward');
 const backwardButton = document.querySelector('.backward');
 
-const cartQuantity = document.querySelector('#cartQuantity');
+const search=document.getElementById('search');
 
-setInterval(() => {
-    cartQuantity.innerText = localStorage.getItem("cartItems");
-}, 1000);
+search.addEventListener('input',(e)=>{
+   window.location.href=`/${e.target.value}`
+});
+// const cartQuantity = document.querySelector('#cartQuantity');
+
+// setInterval(() => {
+//     cartQuantity.innerText = localStorage.getItem("cartItems");
+// }, 1000);
 
 const img = forwardButton.getAttribute('src');
 

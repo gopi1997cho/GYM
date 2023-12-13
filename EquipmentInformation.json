@@ -1,5 +1,4 @@
-[
-    {
+   [ {
         "id":1,
         "items":  {
             "image":"Images/Equipment1.png",
@@ -71,4 +70,4 @@
             "description":"The dumbbell row, also known as the bent-over dumbbell row, is a compound exercise that primarily targets the muscles of the upper back, including the latissimus dorsi, rhomboids, and traps."
        }
     }
-]
+   ]
