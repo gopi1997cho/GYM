@@ -9,7 +9,7 @@ const registermodel=require('./models/registermodel.js');
 const enquirymodel=require('./models/Enquiry.js');
 const cookieparser=require('cookie-parser');
 
-mongoose.connect(process.env.MONGO_URI,{
+mongoose.connect('mongodb+srv://gopichowdaryp1997:gopi123@cluster0.b6yedvb.mongodb.net/',{
 dbName:'equipmentsales'
 }).then(e=>{console.log('database connected!');}).catch(e=>{
     console.log(e.message);
